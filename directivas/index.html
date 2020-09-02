@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directivas</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="vm">
+        <div v-text="text"></div>
+        <div v-html="texthtml"></div>
+        <img v-bind:src="image">
+        <!--Directiva de v-if y v-else-->
+        <div v-if='show'>Is in the condition true</div>
+        <div v-else>Is in the condition false</div>
+
+         <!--Directiva de v-if y v-else-if-->
+
+         <div v-if='caso==1'>Is in the condition 1</div>
+        <div v-else-if='caso==2'>Is in the condition 2</div>
+        <div v-else-if='caso==3'>Is in the condition 3</div>
+        <div v-else-if='caso==4'>Is in the condition 4</div>
+        <div v-else>nothing</div>
+
+        <!--Directiva v-show paravalidar si mostrar o no-->
+        <div v-show='show1'>v-show</div>
+
+        <!--Directiva v-for-->
+        <ul>
+            <li v-for="(country,index) in countries">{{index+1}}-{{country}}</li>
+        </ul>
+
+        <!--Directiva v-for con objetos-->
+        <ul>
+            <li v-for="(value, key) in employee">
+                {{key}}---->{{value}}
+            </li>
+        </ul>
+        
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>

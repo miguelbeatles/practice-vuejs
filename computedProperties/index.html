@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computed Propweties</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="vm">
+        <button v-on:click="first++"> 
+            increment first
+        </button>
+        <button v-on:click="second++"> 
+            increment second
+        </button>
+        <button v-on:click="third++"> 
+            increment third
+        </button>
+        <button v-on:click="fourth++"> 
+            increment fourth
+        </button>
+        <p>First: {{first}}</p>
+        <p>Second: {{second}}</p>
+        <p>Third: {{third}}</p>
+        <p>Fourth: {{fourth}}</p>
+        <p>Plus: {{plus}}</p>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
