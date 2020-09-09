@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eventos</title>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+    <div id="events">
+        <button v-on:click="addOne">add 1</button>
+        <button v-on:click="substractOne">substract 1</button>
+            {{count}}
+            <hr>
+            
+            <!--Arguments-->
+            <button v-on:click="alert('This is the alert')">Show Alert</button>
+
+            <!--Many events and modifiers -->
+            <div style="height: 300px;border:1px solid blue" 
+            v-on:mousemove="showCoordinates"
+            v-on:click.once="add(5)">
+            <div style="height: 30px;border:1px solid red"
+            v-on:mousemove.stop></div>
+            </div>
+            x:{{x}}, y:{{y}},count:{{count1}}
+            <hr>
+            <!--Keyboards evets-->
+            <input type="text" v-on:keyup.delete="addKeyboard(1)">
+            count:{{count2}}
+            <hr>
+            <!--short form v-on-->
+            <input type="text" @keyup.delete="addKeyboardShort(3)">
+            count:{{count3}}
+    </div>
+    
+        <script src="vue.js"></script>
+    </body>
+</html>
